@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:web_flutter/helpers/responsiveness.dart';
 import 'package:web_flutter/widgets/large_screen.dart';
 import 'package:web_flutter/widgets/small_screen.dart';
 
@@ -12,6 +13,9 @@ class SiteLayout extends StatelessWidget {
           elevation: 0,
           backgroundColor: Colors.white,
         ),
-        body: SmallScreen());
+        body: ResponsiveWidget(
+          largeScreen: LargeScreen(),
+          smallScreen: SmallScreen(),
+        ));
   }
 }
