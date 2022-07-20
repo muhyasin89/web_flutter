@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:web_flutter/helpers/responsiveness.dart';
 import 'package:web_flutter/widgets/large_screen.dart';
+import 'package:web_flutter/widgets/medium_screen.dart';
 import 'package:web_flutter/widgets/small_screen.dart';
 
 class SiteLayout extends StatelessWidget {
@@ -15,6 +16,7 @@ class SiteLayout extends StatelessWidget {
         ),
         body: ResponsiveWidget(
           largeScreen: LargeScreen(),
+          mediumScreen: MediumScreen(),
           smallScreen: SmallScreen(),
         ));
   }
