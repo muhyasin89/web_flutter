@@ -1,7 +1,6 @@
-import 'package:flutter/cupertino.dart';
+
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
+
 import 'package:get/get.dart';
 import 'package:web_flutter/constants/controllers.dart';
 import 'package:web_flutter/constants/style.dart';
@@ -32,7 +31,8 @@ class HorizontalMenuItem extends StatelessWidget {
             child: Container(width: 6, height: 40, color: darken,),
             maintainSize: true, maintainState: true, maintainAnimation: true,),
             SizedBox(width: _width/80),
-            Padding(padding: EdgeInsets.all(16),),
+            Padding(padding: EdgeInsets.all(16),
+            child: menuController.returnIconFor(itemName),),
             if(!menuController.isActive(itemName)){
               Flexible(child: CustomText(text: itemName, color: menuController.isHovering(itemName) ? darken : lightGrey,),)
               else

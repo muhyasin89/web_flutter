@@ -1,4 +1,4 @@
-import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:web_flutter/constants/style.dart';
 import 'package:web_flutter/routing/routes.dart';
@@ -24,7 +24,7 @@ class MenuController extends GetxController {
   Widget returnIconFor(String itemName) {
     switch (itemName) {
       case OverViewPageRoute:
-        return _customIcon(Icons.trading_up, itemName);
+        return _customIcon(Icons.trending_up, itemName);
 
       case DriversPageRoute:
         return _customIcon(Icons.drive_eta, itemName);
